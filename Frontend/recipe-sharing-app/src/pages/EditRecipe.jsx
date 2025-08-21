@@ -17,7 +17,7 @@ export default function EditRecipe() {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:5000/api/recipes/${id}`);
+        const { data } = await axios.get(`https://recipe-sharing-app-fj75.onrender.com/api/recipes/${id}`);
         setTitle(data.title);
         setDescription(data.description);
         setIngredients(data.ingredients.length ? data.ingredients : [""]);
@@ -36,7 +36,7 @@ export default function EditRecipe() {
     setSuccess("");
 
     try {
-      await axios.put(`http://localhost:5000/api/recipes/${id}`, {
+      await axios.put(`https://recipe-sharing-app-fj75.onrender.com/api/recipes/${id}`, {
         title,
         description,
         ingredients,

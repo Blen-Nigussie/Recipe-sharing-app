@@ -15,7 +15,7 @@ export default function MyRecipeDetail() {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:5000/api/recipes/${id}`,{
+          `https://recipe-sharing-app-fj75.onrender.com/api/recipes/${id}`,{
             headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -64,7 +64,7 @@ export default function MyRecipeDetail() {
       <div className="bg-gray-100 rounded-lg overflow-hidden mb-6">
         {recipe.image ? (
           <img
-            src={`http://localhost:5000/${recipe.image}`}
+            src={`https://recipe-sharing-app-fj75.onrender.com/${recipe.image}`}
             alt={recipe.title}
             className="w-full h-[350px] object-contain"
           />

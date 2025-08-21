@@ -30,7 +30,7 @@ export default function MyRecipe() {
           return;
         }
 
-        const res = await fetch("http://localhost:5000/api/recipes/my", {
+        const res = await fetch("https://recipe-sharing-app-fj75.onrender.com/api/recipes/my", {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
@@ -61,7 +61,7 @@ export default function MyRecipe() {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:5000/api/recipes/${id}`, {
+      const res = await fetch(`https://recipe-sharing-app-fj75.onrender.com/api/recipes/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -120,7 +120,7 @@ return (
               <div className="bg-gray-100 aspect-[4/3] overflow-hidden">
                 {recipe.image ? (
                   <img
-                    src={`http://localhost:5000/${recipe.image}`}
+                    src={`https://recipe-sharing-app-fj75.onrender.com/${recipe.image}`}
                     alt={recipe.title}
                     className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
                   />

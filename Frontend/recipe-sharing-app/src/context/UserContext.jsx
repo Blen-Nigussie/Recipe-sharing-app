@@ -22,7 +22,7 @@ export const UserProvider = ({ children }) => {
       if (token) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
         try {
-          const response = await axios.get('http://localhost:5000/api/auth/profile');
+          const response = await axios.get('https://recipe-sharing-app-fj75.onrender.com/api/auth/profile');
           setUser(response.data);
         } catch (error) {
           console.error('Auth check failed:', error.response?.data || error.message);
@@ -41,7 +41,7 @@ export const UserProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const response = await axios.post('https://recipe-sharing-app-fj75.onrender.com/api/auth/login', { email, password });
       const { token, user: userDataFromResponse } = response.data;
 
       if (!token) return { success: false, message: "No token returned" };
@@ -52,7 +52,7 @@ export const UserProvider = ({ children }) => {
       let resolvedUser = userDataFromResponse;
 
       if (!resolvedUser) {
-        const profileRes = await axios.get('http://localhost:5000/api/auth/profile');
+        const profileRes = await axios.get('https://recipe-sharing-app-fj75.onrender.com/api/auth/profile');
         resolvedUser = profileRes.data;
       }
 
@@ -74,7 +74,7 @@ export const UserProvider = ({ children }) => {
   };
   const signup = async (name, email, password) => {
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", {
+      const response = await axios.post("https://recipe-sharing-app-fj75.onrender.com/api/auth/register", {
         name,
         email,
         password,

@@ -16,7 +16,7 @@ export default function MealDetail() {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:5000/api/recipes/${id}`,{
+          `https://recipe-sharing-app-fj75.onrender.com/api/recipes/${id}`,{
             headers: {
             Authorization: `Bearer ${token}`,
           },
