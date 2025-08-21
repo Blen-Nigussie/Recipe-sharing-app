@@ -22,6 +22,7 @@ import MyRecipeDescription from '../pages/MyRecipe/MyRecipeDescription';
 import MyRecipeIngredient from '../pages/MyRecipe/MyRecipeIngredient';
 import MyRecipeRecipe from '../pages/MyRecipe/MyRecipeRecipe';
 import CommentPage from '../pages/Comments/CommentPage';
+import EditRecipe from '../pages/EditRecipe';
 
 const AppRoutes = createBrowserRouter(createRoutesFromElements(
    <Route path="/" element={<Layout />}>
@@ -69,6 +70,14 @@ const AppRoutes = createBrowserRouter(createRoutesFromElements(
           element={
             <ProtectedRoute>
               <AddRecipe />
+            </ProtectedRoute>
+          }
+      />
+      <Route
+          path='/edit-recipe/:id'
+          element={
+            <ProtectedRoute>
+              <EditRecipe />
             </ProtectedRoute>
           }
       />

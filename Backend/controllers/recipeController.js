@@ -60,7 +60,6 @@ exports.getRecipesByCategory = async (req, res) => {
   }
 };
 
-// UPDATE recipe
 exports.updateRecipe = async (req, res) => {
   try {
     const recipe = await Recipe.findById(req.params.id);
@@ -71,20 +70,40 @@ exports.updateRecipe = async (req, res) => {
     }
 
     const { title, description, ingredients, steps, category } = req.body;
+
     if (title) recipe.title = title;
     if (description) recipe.description = description;
-    if (ingredients) recipe.ingredients = ingredients.split(",").map(i => i.trim());
-    if (steps) recipe.steps = steps.split("\n").map(s => s.trim());
+
+    // ✅ FIX: handle both array and string
+    // ... (inside exports.updateRecipe)
+if (ingredients) {
+    if (typeof ingredients === 'string') {
+        recipe.ingredients = ingredients.split(",").map(i => i.trim());
+    } else if (Array.isArray(ingredients)) {
+        recipe.ingredients = ingredients.map(i => i.trim());
+    }
+}
+
+if (steps) {
+    if (typeof steps === 'string') {
+        recipe.steps = steps.split("\n").map(s => s.trim());
+    } else if (Array.isArray(steps)) {
+        recipe.steps = steps.map(s => s.trim());
+    }
+}
+// ...
+
     if (category) recipe.category = category;
     if (req.file) recipe.image = req.file.path;
 
     await recipe.save();
     res.json(recipe);
   } catch (error) {
-    console.error("Error updating recipe:", error.message);
+    console.error("❌ Error updating recipe:", error.message, error.stack);
     res.status(500).json({ message: "Server error updating recipe" });
   }
 };
+
 //  GET recipes created by logged-in user
 exports.getMyRecipes = async (req, res) => {
   try {
