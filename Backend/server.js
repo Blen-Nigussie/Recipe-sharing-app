@@ -10,13 +10,6 @@ const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
 // Load environment variables
 dotenv.config();
 
-// Check if JWT_SECRET is set
-if (!process.env.JWT_SECRET) {
-  console.warn("  WARNING: JWT_SECRET not found in environment variables!");
-  console.warn("  Authentication will fail. Please create a .env file with JWT_SECRET");
-  process.env.JWT_SECRET = "dev_secret_key_change_in_production";
-}
-
 // Connect to database
 connectDB();
 

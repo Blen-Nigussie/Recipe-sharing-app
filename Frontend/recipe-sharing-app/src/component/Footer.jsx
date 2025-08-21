@@ -1,4 +1,5 @@
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+  import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -20,39 +21,38 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-3 transition-colors duration-300 hover:text-white/90">
             Quick Links
           </h3>
-          <ul className="space-y-2 text-sm">
-            {["Home", "Recipes", "Submit Recipe", "About Us"].map((item, index) => (
-              <li key={index}>
-                <a
-                  href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="hover:underline transition duration-300 hover:text-white/90"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
+       
+
+<ul className="space-y-2 text-sm">
+  <li>
+    <NavLink 
+      to="/" 
+      className="hover:underline transition duration-300 hover:text-white/90"
+    >
+      Home
+    </NavLink>
+  </li>
+  <li>
+    <NavLink 
+      to="/meals" 
+      className="hover:underline transition duration-300 hover:text-white/90"
+    >
+      Recipes
+    </NavLink>
+  </li>
+  <li>
+    <NavLink 
+      to="/add-recipe" 
+      className="hover:underline transition duration-300 hover:text-white/90"
+    >
+      Add Recipe
+    </NavLink>
+  </li>
+  
+</ul>
+
         </div>
 
-        {/* Newsletter */}
-        <div>
-          <h3 className="text-lg font-semibold mb-3 transition-colors duration-300 hover:text-white/90">
-            Subscribe
-          </h3>
-          <form className="flex flex-col gap-3">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="px-3 py-2 rounded text-black focus:outline-none focus:ring-2 focus:ring-white/50"
-            />
-            <button
-              type="submit"
-              className="bg-white text-[#4b9e22] font-semibold px-3 py-2 rounded hover:bg-gray-100 transition duration-300"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
 
         {/* Social Icons */}
         <div>
