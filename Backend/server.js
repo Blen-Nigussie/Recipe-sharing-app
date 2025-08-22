@@ -6,7 +6,7 @@ const authRoutes = require("./routes/authRoutes");
 const recipeRoutes = require("./routes/recipeRoutes");
 const commentRoutes = require("./routes/commentRoutes");
 const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
-
+const seedRecipes = require('./seed/seedRecipes')
 // Load environment variables
 dotenv.config();
 
