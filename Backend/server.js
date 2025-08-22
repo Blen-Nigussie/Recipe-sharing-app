@@ -43,9 +43,9 @@ app.use("/api/recipes", recipeRoutes);
 app.use("/api/comments", commentRoutes);
 
 // Redirect root to frontend
-app.get("/", (req, res) => {
-  res.redirect("https://enbla-recipe-sharing-app.netlify.app/");
-});
+// app.get("/", (req, res) => {
+//   res.redirect("https://enbla-recipe-sharing-app.netlify.app/");
+// });
 
 // Error handling
 app.use(notFound);
