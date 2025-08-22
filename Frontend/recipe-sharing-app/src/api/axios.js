@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://recipe-sharing-app-fj75.onrender.com/api', 
+  baseURL: 'https://enbla-recipe-sharing-app-16il.onrender.com/api', 
   withCredentials: true, // if you're using cookies or sessions
   headers: {
     'Content-Type': 'application/json',

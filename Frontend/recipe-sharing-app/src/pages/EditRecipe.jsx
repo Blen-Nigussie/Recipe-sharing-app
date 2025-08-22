@@ -17,7 +17,7 @@ export default function EditRecipe() {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const { data } = await axios.get(`https://recipe-sharing-app-fj75.onrender.com/api/recipes/${id}`);
+        const { data } = await axios.get(`https://enbla-recipe-sharing-app-16il.onrender.com/api/recipes/${id}`);
         setTitle(data.title);
         setDescription(data.description);
         setIngredients(data.ingredients.length ? data.ingredients : [""]);

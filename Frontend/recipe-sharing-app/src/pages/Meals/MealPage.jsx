@@ -16,7 +16,7 @@ export default function Meals() {
   useEffect(() => {
      const token = localStorage.getItem("token");
      axios
-      .get("https://recipe-sharing-app-fj75.onrender.com/api/recipes",
+      .get("https://enbla-recipe-sharing-app-16il.onrender.com/api/recipes",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -46,7 +46,7 @@ const handleLike = async (e, recipeId) => {
 
   try {
     await axios.put(
-      `https://recipe-sharing-app-fj75.onrender.com/api/recipes/like/${recipeId}`,
+      `https://enbla-recipe-sharing-app-16il.onrender.com/api/recipes/like/${recipeId}`,
       {},
       { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
     );

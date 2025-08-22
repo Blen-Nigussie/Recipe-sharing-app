@@ -21,7 +21,7 @@ export default function LikedMeal() {
         }
 
         // Use the proper backend endpoint for liked recipes
-        const response = await axios.get("https://recipe-sharing-app-fj75.onrender.com/api/recipes/liked", {
+        const response = await axios.get("https://enbla-recipe-sharing-app-16il.onrender.com/api/recipes/liked", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -90,7 +90,7 @@ export default function LikedMeal() {
                     <>
                       {console.log("🖼️ Rendering image for recipe:", recipe.title, "Image path:", recipe.image)}
                       <img
-                        src={recipe.image.startsWith('http') ? recipe.image : `https://recipe-sharing-app-fj75.onrender.com/${recipe.image}`}
+                        src={recipe.image.startsWith('http') ? recipe.image : `https://enbla-recipe-sharing-app-16il.onrender.com/${recipe.image}`}
                         alt={recipe.title}
                         className="w-full h-full object-contain"
                         onError={(e) => {

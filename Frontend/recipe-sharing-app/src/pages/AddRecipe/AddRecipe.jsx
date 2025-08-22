@@ -41,7 +41,7 @@ export default function AddRecipe() {
     formData.append("steps", steps.join("\n"));
 
     try {
-      const res = await axios.post("https://recipe-sharing-app-fj75.onrender.com/api/recipes", formData, {
+      const res = await axios.post("https://enbla-recipe-sharing-app-16il.onrender.com/api/recipes", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
