@@ -360,5 +360,5 @@ async function seedRecipes() {
     console.error("Error seeding recipes:", err);
   }
 }
+module.exports = seedRecipes;
 
-seedRecipes();
