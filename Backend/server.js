@@ -19,6 +19,11 @@ connectDB().then(() => {
 
 const app = express();
 
+app.get("/", (req, res) => {
+  res.redirect("https://enbla-recipe-sharing-app.netlify.app/");
+});
+
+
 // Middleware
 app.use(cors());
 app.use(express.json());
