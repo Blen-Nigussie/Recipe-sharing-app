@@ -13,7 +13,7 @@ export default function PopularMeals() {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:5000/api/recipes/category/Popular",
+      .get("https://enbla-recipe-sharing-app-16il.onrender.com/api/recipes/category/Popular",
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -15,7 +15,7 @@ export default function PopularMealsDetail() {
     const fetchRecipe = async () => {
       const token = localStorage.getItem("token");
       try {
-        const response = await axios.get(`http://localhost:5000/api/recipes/${id}`,{
+        const response = await axios.get(`https://enbla-recipe-sharing-app-16il.onrender.com/api/recipes/${id}`,{
           headers: {
             Authorization: `Bearer ${token}`,
           },
