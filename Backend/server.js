@@ -7,6 +7,7 @@ const recipeRoutes = require("./routes/recipeRoutes");
 const commentRoutes = require("./routes/commentRoutes");
 const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
 const seedRecipes = require('./seed/seedRecipes');
+const path = require("path");
 
 // Load environment variables
 dotenv.config();
@@ -27,7 +28,8 @@ app.use(cors(corsOptions));
 app.options("*", cors(corsOptions));
 
 app.use(express.json());
-app.use("/uploads", express.static("uploads"));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
 
 // Request logging middleware
 app.use((req, res, next) => {

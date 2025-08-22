@@ -328,7 +328,8 @@ const recipes = [
       "Remove the fish and place it on a wire rack to drain. Raise the oil temperature to 375°F (190°C) and fry the blanched potatoes until golden and crispy."
     ],
     category: "Popular",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/img/fish_and_chips.png",
+    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/fish_and_chips.png"
+,
   },
   {
     title: "Feijoada",
