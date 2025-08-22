@@ -6,28 +6,20 @@ const authRoutes = require("./routes/authRoutes");
 const recipeRoutes = require("./routes/recipeRoutes");
 const commentRoutes = require("./routes/commentRoutes");
 const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
-const seedRecipes = require('./seed/seedRecipes')
+const seedRecipes = require('./seed/seedRecipes');
+
 // Load environment variables
 dotenv.config();
 
-// Connect to database
-connectDB().then(() => {
-  // Seed DB after successful connection
-  seedRecipes();
-});
-
-
 const app = express();
 
-app.get("/", (req, res) => {
-  res.redirect("https://enbla-recipe-sharing-app.netlify.app/");
-});
-
-
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://enbla-recipe-sharing-app.netlify.app",
+  credentials: true, // allow cookies/auth headers
+}));
 app.use(express.json());
-app.use("/uploads", express.static("uploads")); 
+app.use("/uploads", express.static("uploads"));
 
 // Request logging middleware
 app.use((req, res, next) => {
@@ -40,13 +32,29 @@ app.use("/api/auth", authRoutes);
 app.use("/api/recipes", recipeRoutes);
 app.use("/api/comments", commentRoutes);
 
+// Redirect root to frontend
+app.get("/", (req, res) => {
+  res.redirect("https://enbla-recipe-sharing-app.netlify.app/");
+});
+
 // Error handling
 app.use(notFound);
 app.use(errorHandler);
+
+// Connect to DB and seed
+connectDB()
+  .then(() => {
+    console.log("MongoDB Connected");
+    if (typeof seedRecipes === "function") {
+      seedRecipes();
+    }
+  })
+  .catch((err) => {
+    console.error("DB connection error:", err);
+  });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`JWT_SECRET: ${process.env.JWT_SECRET ? ' Set' : ' Missing'}`);
-  console.log(` MongoDB: Connected`);
 });
