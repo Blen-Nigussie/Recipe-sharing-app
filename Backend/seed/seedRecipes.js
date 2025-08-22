@@ -349,13 +349,15 @@ const recipes = [
 
 async function seedRecipes() {
   try {
-    await Recipe.deleteMany(); // Clears previous data (optional)
-    await Recipe.insertMany(recipes);
-    console.log(" Sample recipes for all categories added.");
-    process.exit();
-  } catch (error) {
-    console.error(" Error seeding recipes:", error);
-    process.exit(1);
+    const count = await Recipe.countDocuments();
+    if (count === 0) { // only seed if DB is empty
+      await Recipe.insertMany(recipes);
+      console.log("Sample recipes added to DB.");
+    } else {
+      console.log("DB already has data, skipping seeding.");
+    }
+  } catch (err) {
+    console.error("Error seeding recipes:", err);
   }
 }
 

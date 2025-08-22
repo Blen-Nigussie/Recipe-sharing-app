@@ -11,7 +11,11 @@ const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
 dotenv.config();
 
 // Connect to database
-connectDB();
+connectDB().then(() => {
+  // Seed DB after successful connection
+  seedRecipes();
+});
+
 
 const app = express();
 
