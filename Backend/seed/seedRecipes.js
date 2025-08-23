@@ -24,7 +24,7 @@ const recipes = [
       "Serve hot with your favorite toppings."
     ],
     category: "Breakfast",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/fluffy_pancake.png",
+    image: "/uploads/img/fluffy_pancake.png",
   },
   {
     title: "Avocado Toast with Egg",
