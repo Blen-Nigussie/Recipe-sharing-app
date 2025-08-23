@@ -16,16 +16,17 @@ const app = express();
 
 // Middleware
 const corsOptions = {
-  origin: "https://enbla-recipe-sharing-app.netlify.app",
+  origin: [
+    "https://enbla-recipe-sharing-app.netlify.app",
+    "http://localhost:5173"
+  ],
   credentials: true, // allow cookies/auth headers
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // allow these methods
   allowedHeaders: ["Content-Type", "Authorization"], // allow these headers
 };
 
-app.use(cors(corsOptions));
 
-// Handle preflight requests
-app.options("*", cors(corsOptions));
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));

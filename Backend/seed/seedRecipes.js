@@ -39,7 +39,7 @@ const recipes = [
       "Sprinkle with red pepper flakes and an extra pinch of salt and pepper to taste."
     ],
     category: "Breakfast",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/avocado_toast.png",
+    image: "/uploads/img/avocado_toast.png",
   },
   {
     title: "Classic Omelet",
@@ -54,7 +54,7 @@ const recipes = [
       "Cook for another minute until the cheese is melted and the omelet is heated through."
     ],
     category: "Breakfast",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/omelette.png",
+    image: "/uploads/img/omelette.png",
   },
 
   //  Lunch
@@ -69,7 +69,7 @@ const recipes = [
       "Add the sliced chicken to the salad, drizzle with dressing, and toss gently to combine."
     ],
     category: "Lunch",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/grilled_chicken_salad.png",
+    image: "/uploads/img/grilled_chicken_salad.png",
   },
   {
     title: "Vegetable Wrap",
@@ -82,7 +82,7 @@ const recipes = [
       "Fold in the sides of the tortilla, then roll it tightly from the bottom. Slice in half and serve."
     ],
     category: "Lunch",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/vegetable_wrap.png",
+    image: "/uploads/img/vegetable_wrap.png",
   },
   {
     title: "Turkey Sandwich",
@@ -96,7 +96,7 @@ const recipes = [
       "Top with the second slice of bread, cut in half, and serve."
     ],
     category: "Lunch",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/turkey_sandwich.png",
+    image: "/uploads/img/turkey_sandwich.png",
   },
 
   //  Dinner
@@ -112,7 +112,7 @@ const recipes = [
       "Remove the salmon from the grill, top with the lemon butter sauce, and serve immediately."
     ],
     category: "Dinner",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/grilled_salmon.png",
+    image: "/uploads/img/grilled_salmon.png",
   },
   {
     title: "Steak and Potatoes",
@@ -125,7 +125,7 @@ const recipes = [
       "Slice the steak and serve it alongside the mashed potatoes."
     ],
     category: "Dinner",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/steak_and_potato.png",
+    image: "/uploads/img/steak_and_potato.png",
   },
   {
     title: "Vegetable Stir Fry",
@@ -139,7 +139,7 @@ const recipes = [
       "Serve immediately over rice or noodles."
     ],
     category: "Dinner",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/vegetable_stir_fry.png",
+    image: "/uploads/img/vegetable_stir_fry.png",
   },
 
   //  Snacks
@@ -153,7 +153,7 @@ const recipes = [
       "Pour into a glass and serve immediately."
     ],
     category: "Snacks",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/fruit_smoothie.png",
+    image: "/uploads/img/fruit_smoothie.png",
   },
   {
     title: "Granola Bars",
@@ -166,7 +166,7 @@ const recipes = [
       "Press the mixture firmly into the prepared pan. Bake for 20-25 minutes, then let it cool completely before slicing into bars."
     ],
     category: "Snacks",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/granola_bar.png",
+    image: "/uploads/img/granola_bar.png",
   },
   {
     title: "Popcorn",
@@ -179,7 +179,7 @@ const recipes = [
       "Pour the popcorn into a large bowl, drizzle with melted butter, and toss with salt."
     ],
     category: "Snacks",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/popcorn.png",
+    image: "/uploads/img/popcorn.png",
   },
 
   //  Desserts
@@ -195,7 +195,7 @@ const recipes = [
       "Let the cake cool completely before frosting and serving."
     ],
     category: "Desserts",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/chocolate_cake.png",
+    image: "/uploads/img/chocolate_cake.png",
   },
   {
     title: "Fruit Tart",
@@ -209,7 +209,7 @@ const recipes = [
       "Refrigerate for at least 30 minutes before serving."
     ],
     category: "Desserts",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/fruit_tart.png",
+    image: "/uploads/img/fruit_tart.png",
   },
   {
     title: "Ice Cream Sundae",
@@ -222,7 +222,7 @@ const recipes = [
       "Finish with a maraschino cherry on top and serve immediately."
     ],
     category: "Desserts",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/ice_creame_sande.png",
+    image: "/uploads/img/ice_creame_sande.png",
   },
 
   //  Popular
@@ -239,7 +239,7 @@ const recipes = [
       "Remove from the oven, top with fresh basil leaves, a drizzle of olive oil, and a pinch of salt."
     ],
     category: "Popular",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/margherita_pizza.png",
+    image: "/uploads/img/margherita_pizza.png",
   },
   {
     title: "Sushi (California Roll)",
@@ -254,7 +254,7 @@ const recipes = [
       "Serve with soy sauce and wasabi for dipping."
     ],
     category: "Popular",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/california_roll.png",
+    image: "/uploads/img/california_roll.png",
   },
   {
     title: "Tacos",
@@ -269,7 +269,7 @@ const recipes = [
       "Serve with a dollop of salsa and sour cream."
     ],
     category: "Popular",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/tacos.png",
+    image: "/uploads/img/tacos.png",
   },
   {
     title: "Chicken Tikka Masala",
@@ -283,7 +283,7 @@ const recipes = [
       "Garnish with fresh cilantro and serve hot with naan bread or rice."
     ],
     category: "Popular",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/chicken_tikka_masala.png",
+    image: "/uploads/img/chicken_tikka_masala.png",
   },
   {
     title: "Ramen",
@@ -298,7 +298,7 @@ const recipes = [
       "Serve immediately while the soup is hot."
     ],
     category: "Popular",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/ramen.png",
+    image: "/uploads/img/ramen.png",
   },
   {
     title: "Paella",
@@ -313,7 +313,7 @@ const recipes = [
       "Cover and cook on low heat for 15-20 minutes, or until the rice is cooked and most of the liquid is absorbed. Do not stir the rice during this step to allow for the classic crispy bottom, or 'socarrat.'"
     ],
     category: "Popular",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/paella.png",
+    image: "/uploads/img/paella.png",
   },
   {
     title: "Fish and Chips",
@@ -328,7 +328,7 @@ const recipes = [
       "Remove the fish and place it on a wire rack to drain. Raise the oil temperature to 375°F (190°C) and fry the blanched potatoes until golden and crispy."
     ],
     category: "Popular",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/fish_and_chips.png"
+    image: "/uploads/img/fish_and_chips.png"
 ,
   },
   {
@@ -344,7 +344,7 @@ const recipes = [
       "Serve hot over white rice, with a side of sautéed collard greens and fresh orange slices."
     ],
     category: "Popular",
-    image: "https://enbla-recipe-sharing-app-16il.onrender.com/uploads/img/feijoada.png",
+    image: "/uploads/img/feijoada.png",
   },
 ];
 
