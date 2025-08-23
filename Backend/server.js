@@ -16,10 +16,9 @@ const app = express();
 
 // Middleware
 const corsOptions = {
-  origin: [
+  origin:
     "https://enbla-recipe-sharing-app.netlify.app",
-    "http://localhost:5173"
-  ],
+  
   credentials: true, // allow cookies/auth headers
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // allow these methods
   allowedHeaders: ["Content-Type", "Authorization"], // allow these headers
